@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <title>Valeria Munugia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/forms.css">
+  <link rel="stylesheet" href="../css/style.css">
+ </head>
+ <body>
+     <header>
+     <h1 Class="page-header">Valeria Munguia</h1>
+     <nav class="topnav" id="myTopnav">
+        <a href="../index.html" class="active">Home</a>
+        <a href="Khalil.html" target="_blank">Khalil</a>
+        <a href="Elizabeth.html" target="_blank">Elizabeth</a>
+        <a href="Val.html" target="_blank">Val</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </nav>
+     </header>
+     
+   <main class="wrapper">
+        <picture class="profile">
+            <source media="(min-width: 1200px)" srcset="../images/Val.jpg">
+            <source media="(min-width: 501px)" srcset="../images/Val.jpg">
+            <img src="../images/Val.jpg" alt="That's me!">
+        </picture>   
+       <h2 class="subheader">About Me</h2>
+       
+       <p>Hola! My name is Valeria Munguia but I don't mind being called Val. I am in class 26 of Year Up program softwear developer in Seattle Central College. I'm currently learning HTML,CSS, and Python. As well leraning about bussiness communication and Excel. 
+
+        I moved to Seattle to get out of my comfort zone and to find what career I want to pursue. This year, 2023, I've become more passionate about my professional growth, and I am dedicated to the art of continuous learning. With a strong belief that knowledge is the key to unlocking new opportunities in one's career.
+        
+        I like to think I am a spirtual person, when I was about 20 years old I started to see random dragonflies and for some reason started to believe that they only showed up when I needed a reminded that I am in the right path. Ever since I've seen them at places I've traveled or when I just go for walks and usaully it's when I least expect it. 
+
+
+       </p>
+     
+    <footer>
+      <p><small>&copy; 2021-<span id="this-year"></span> by 
+          Valeria Munguia, All Rights Reserved ~ 
+          <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
+          <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
+     </p>
+    </footer>
+  </main>
+     
+  <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+    <script>
+    //https://tinyurl.com/dynamic-html-checker
+    document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
+      
+    document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href); 
+     
+     //set current year in span with id of this-year
+     let d = new Date(); let thisYear = d.getFullYear();
+     document.getElementById("this-year").innerHTML = thisYear;
+    
+    //manages mobile nav 
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }   
+ </script>
+     
+ </body>
+</html>
