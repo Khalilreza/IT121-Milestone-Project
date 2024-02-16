@@ -1,12 +1,13 @@
 /* Global rules */
 
-@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@600;700&family=Chivo:ital,wght@1,200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@600;700&family=Chivo:ital,wght@1,200&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@200..800&display=swap');
 
 
 html {
     background-color: #3f3e3e;
 
-    font-family: 'Chivo', serif;
+    font-family: 'Manrope', serif;
     font-size: 0.95em;
     line-height: 1.5em;
 }
@@ -29,7 +30,7 @@ main.wrapper {
 }
 
 p {
-    margin: 1em; /* Top Right Bottom Left (TRBL) */
+    margin: .3em; /* Top Right Bottom Left (TRBL) */
 }
 
 h2,h3 {
@@ -76,6 +77,31 @@ footer {
     }
     
 }
+.hobbies{
+    display:flex;
+    justify-content: space-around;
+}
+.hobbies img{
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+.hobbies-header{
+    display:block; 
+    width: 100%; 
+    clear:both; 
+    text-align: center;
+    font-size: large;
+    padding: 1.5em 0;
+}
+.card{
+    text-align: center;
+}
+
+.about-section{
+    display:flex;
+    flex-direction:column;
+}
 
 /* TABLET */
 @media all and (min-width:501px) and (max-width:1199px) {
@@ -89,6 +115,12 @@ footer {
         padding-left: 1%;
     }
     
+    .hobbies img{
+        width:  150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
     picture.profile img {
         width: 50%;
         float: right;
@@ -108,6 +140,12 @@ footer {
         padding-left: 1%;
     }
     
+    .hobbies img{
+        width:  100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
     picture.profile img {
         width: 100%;
     }

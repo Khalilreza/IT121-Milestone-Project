@@ -28,45 +28,44 @@
      </header>
      
    <main class="wrapper">
-        <picture class="profile">
-            <source media="(min-width: 1200px)" srcset="images/desktop.jpg">
-            <source media="(min-width: 501px)" srcset="images/tablet.jpg">
-            <img src="images/desktop.jpg" alt="That's me!">
+        <div class="main-section">
+            <picture class="profile">
+                <source media="(min-width: 1200px)" srcset="images/desktop.jpg">
+                <img src="images/desktop.jpg" alt="That's me!">
             
-        </picture>   
-        <!--About me section-->
-       <h2 class="subheader">About Me</h2>
-       
-       <p>Hey there, welcome! Thank you for visiting our page today! This awesome page was created by Khalil Reza, Valeria Munguia, and Elizabeth Nichols.</p><p>
-             
-       <p>This webpage goes over some of our most enjoyable hobbies.</p>
+            </picture>
+            <!--About me section-->
+                   <div class="about-section">
+               <h2 class="subheader"><b>About Me</b></h2>
+            
+               <p>Hey there, welcome! Thank you for visiting our page today! This awesome page was created by Khalil Reza, Valeria Munguia, and Elizabeth Nichols.</p>
+            
+               <p>This webpage goes over some of our most enjoyable hobbies.</p>
+               <p>I hope you can take a thing or two out of our hobbies and implement it as one of your own!</p>
+               
+            
+               <iframe width="450" height="240" src="https://www.youtube.com/embed/SoZX_B9rS5k" title="why hobbies are important" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   </div>
+        </div>
 
-       <p>I hope you can take a thing or two out of our hobbies and implement it as one of your own!</p>
-
-       <p>
-
-<iframe width="450" height="240" src="https://www.youtube.com/embed/SoZX_B9rS5k" title="why hobbies are important" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-        <table>
-          <p style=" width: 300px; margin-top: 3rem; display:block;"> Our Favorite Hobbies:
-          </p>
-          <tr>
-              <th>Exercise</th>
-              <th>Yoga</th>
-              <th>Art</th>
-          </tr>
-          <tr>
-              <td class="myImage">
+        <p class="hobbies-header"> <b>Our Favorite Hobbies:</b>
+        </p>
+        <div class="hobbies">
+          
+              <div class="card">
                   <img src="images/weights.jpg" alt="" width="300px">
-              </td>
-              <td class="myImage">
+                  <p>Exercise</p>
+              </div>
+              <div class="card">
                   <img src="images/yoga.jpg" alt="" width="300px">
-              </td>
-              <td class="myImage">
+                  <p>Yoga</p>
+              </div>
+              <div class="card">
                   <img src="images/art.jpg" alt="" width="300px">
-              </td>
-          </tr>
-      </table>
+                  <p>Art</p>
+              </div>
+          
+        </div>
         <!--Footer section-->
      <footer>
       <p><small>&copy; 2021-<span id="this-year"></span> by 

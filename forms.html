@@ -15,21 +15,45 @@
   <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <h1>Contact Us Form</h1>
     <div class="container">
-      <form action="" method="POST">
-      <div id="formfield">
-        <input type="text" name="text" class="text" size="50" placeholder="Name" required>
-        <input type="text" name="text" class="text" size="50" placeholder="Email" required>
-        <input type="text" name="text" class="text" size="50" placeholder="Optional Field">
+      <div class="text">
+         Contact us Form
       </div>
-      <input name="submit" type="Submit" value="Submit">
-    </form>
-      <div class="controls">
-        <button class="add" onclick="add()"><i class="fa fa-plus"></i>Add</button>
-        <button class="remove" onclick="remove()"><i class="fa fa-minus"></i>Remove</button>
+      <form action="#">
+         <div class="form-row">
+            <div class="input-data">
+               <input type="text" required>
+               <div class="underline"></div>
+               <label for="">First Name</label>
+            </div>
+            <div class="input-data">
+               <input type="text" required>
+               <div class="underline"></div>
+               <label for="">Last Name</label>
+            </div>
+         </div>
+         <div class="form-row">
+            <div class="input-data">
+               <input type="text" required>
+               <div class="underline"></div>
+               <label for="">Email Address</label>
+            </div>
+         </div>
+         <div class="form-row">
+         <div class="input-data textarea">
+            <textarea rows="8" cols="80" required></textarea>
+            <br />
+            <div class="underline"></div>
+            <label for="">Write your message</label>
+            <br />
+            <div class="form-row submit-btn">
+               <div class="input-data">
+                  <div class="inner"></div>
+                  <input type="submit" value="submit">
+               </div>
+            </div>
+      </form>
       </div>
-    </div>
   <script src="script.js"></script>
   </body>
 </html>
