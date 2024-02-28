@@ -10,6 +10,30 @@
   <link rel="stylesheet" href="css/forms.css">
 <!--reference to javascript file -->
   <script type="text/javascript" src="greetings.js"></script>
+  <style>
+    .clock {
+        position: fixed;
+        top: calc(0.25in + 20px);
+        right: calc(1in + 20px);
+        width: 500px;
+        text-align: center;
+        color: white;
+        font-size: 1em;
+    }
+    .clock > span {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+    }
+    .clock > span > span {
+        padding: 5px;
+        border-radius: 10px;
+        background-color: red;
+    }
+    input {
+        display: none; 
+    }
+</style>
 
  </head>
  <body>
@@ -66,6 +90,15 @@
               </div>
           
         </div>
+
+        <!--Countdown Timer Section-->
+          <div class="clock">
+              <span><span id="days">0</span> Days</span>
+              <span><span id="hours">0</span> Hours</span>
+              <span><span id="minutes">0</span> Minutes</span>
+              <span><span id="seconds">0</span> Seconds</span>
+          </div>
+  
         <!--Footer section-->
      <footer>
       <p><small>&copy; 2021-<span id="this-year"></span> by 
@@ -74,6 +107,36 @@
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
     </footer>
+   <!-- JavaScript for Countdown Timer -->
+   <script>
+    function updateCountdown() {
+        const endDate = new Date('March 25, 2024 00:00:00').getTime(); // Set end date to March 25th
+        const now = new Date().getTime();
+        const difference = endDate - now;
+
+        if (difference > 0) {
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        } else {
+            // If the end date is in the past or the input is empty
+            document.getElementById('days').textContent = '0';
+            document.getElementById('hours').textContent = '0';
+            document.getElementById('minutes').textContent = '0';
+            document.getElementById('seconds').textContent = '0';
+        }
+    }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+    </script>
+
   </main>
   <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
     <script>
@@ -94,7 +157,7 @@
         } else {
             x.className = "topnav";
         }
-    }   
+      }
  </script>
      
  </body>
