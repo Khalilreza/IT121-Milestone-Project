@@ -11,27 +11,25 @@
 <!--reference to javascript file -->
   <script type="text/javascript" src="greetings.js"></script>
   <style>
-    .clock {
-        position: fixed;
-        top: calc(0.25in + 20px);
-        right: calc(1in + 20px);
-        width: 500px;
-        text-align: center;
-        color: white;
-        font-size: 1em;
-    }
-    .clock > span {
-        padding: 10px;
-        border-radius: 10px;
-        background-color: black;
-    }
-    .clock > span > span {
-        padding: 5px;
-        border-radius: 10px;
-        background-color: red;
+    *{
+        box-sizing: border-box;
     }
     input {
         display: none; 
+    }
+
+    #header-countdown{
+        display:flex;
+        padding-right:1em;
+        max-width: 80%;
+        font-weight:bold;
+        margin: auto;
+        background-color: #da7b7b;
+        text-wrap: nowrap;
+        align-items: center;
+    }
+    #header-countdown  span{
+        font-size:1.2rem;
     }
 </style>
 
@@ -39,7 +37,17 @@
  <body>
     <!--Website Header-->
      <header>
-     <h1>Hobbies Page</h1>
+     <div id="header-countdown">
+         <h1>Hobbies Page</h1>
+            <!--Countdown Timer Section-->
+              <div class="clock">
+                <p>Countdown till yearup ends: </p>
+                  <span><span id="days">0</span> Days</span>
+                  <span><span id="hours">0</span> Hours</span>
+                  <span><span id="minutes">0</span> Minutes</span>
+                  <span><span id="seconds">0</span> Seconds</span>
+              </div>
+     </div>
         <nav class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
             <a href="Pages/Khalil.html" target="_blank">Khalil</a>
@@ -91,13 +99,6 @@
           
         </div>
 
-        <!--Countdown Timer Section-->
-          <div class="clock">
-              <span><span id="days">0</span> Days</span>
-              <span><span id="hours">0</span> Hours</span>
-              <span><span id="minutes">0</span> Minutes</span>
-              <span><span id="seconds">0</span> Seconds</span>
-          </div>
   
         <!--Footer section-->
      <footer>
