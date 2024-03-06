@@ -1,8 +1,8 @@
 /* Global rules */
 .topnav {
   margin: auto;
-  /* background-color: rgb(176, 201, 190); */
-  background-color: #da7b7b;
+  background-color: rgb(176, 201, 190);
+  /*background-color: #da7b7b;*/
   overflow: auto;
 }
 
