@@ -32,6 +32,89 @@ main.wrapper {
 p {
     margin: .3em; /* Top Right Bottom Left (TRBL) */
 }
+/* Hover */
+.hobbies-header:hover, .about-section:hover {
+    background: rgb(112, 112, 232); /* neutral-750 */
+  }
+  
+  /* Disabled */
+  .hobbies-header:disabled {
+    opacity: 0.8;
+  }
+  #coverimage {
+    opacity: 0; /* Initially set opacity to 0 /
+    transition: opacity 0.5s ease; / Fallback for CSS animation */
+}
+/* Fade in/out animation */
+#coverimage {
+    opacity: 0; /* Initially set opacity to 0 /
+    transition: opacity 0.5s ease; / Fallback for CSS animation */
+}
+
+.fade-in {
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#coverimage {
+  animation: fadeInOut 4s infinite;
+  -webkit-animation: fadeInOut 4s infinite;
+  -moz-animation: fadeInOut 4s infinite;
+  -o-animation: fadeInOut 4s infinite;
+  -ms-animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 h2,h3 {
     font-weight: normal;
